@@ -1,0 +1,32 @@
+.page-header {
+    background-color: #9f6ccf;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+    text-align: center;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 80pt;
+    text-decoration: none;
+}
+
+.content {
+    text-align: center;
+    font-size:15pt;
+    color black;
+    margin:80px;
+}
+
+h1 {
+    font-size: 25pt;    
+}
+
+.container {
+    width: 80%;
+}
+
+.date {
+  font-size:13pt;
+  text-decoration: underline;
+}
