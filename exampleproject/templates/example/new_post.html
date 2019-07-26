@@ -2,8 +2,7 @@
 
 {% block content %}
    {% for post in post %}
-      <div class="content">
-        <div class="container">
+      <div class="content container">
         <h1><a href="{% url 'post_detail' pk=post.pk %}" style="color: black;">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
         <div class="date">
