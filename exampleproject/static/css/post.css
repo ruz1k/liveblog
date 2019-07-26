@@ -2,31 +2,51 @@
     background-color: #9f6ccf;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
-    text-align: center;
+    text-align: left;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
-    font-size: 80pt;
+    font-size: 55pt;
     text-decoration: none;
+    font-family: 'Francois One', sans-serif;
 }
 
 .content {
     text-align: center;
     font-size:18pt;
     color black;
-    margin:80px;
+    margin-top:50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
 }
 
 h1 {
-    font-size: 25pt;    
+    font-size: 25pt;
 }
 
 .container {
-    width: 80%;
+    width:65%;
 }
 
 .date {
   font-size:13pt;
-  text-decoration: underline;
+  text-decoration: overline;
 }
+
+.post_new {
+    margin-left:30px;
+    margin-top:30px;
+}
+
+.new_post h1 {
+    margin-left:30px;
+}
+
+.post_detail {
+    text-align: center;
+    font-size: 20
+}
+
