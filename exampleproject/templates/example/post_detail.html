@@ -1,0 +1,18 @@
+{% extends 'example/index.html' %}
+
+{% block content %}
+    <div class="post_detail">
+    	<div class="container">
+        <h1>{{ post.title }}</h1>
+        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <p>{{ post.text|linebreaksbr }}</p>
+        {% if post.image %}
+        <p><img src="{{post.image.url}}" width="240"></p>
+        {% else %}
+       <p></p>
+        {% endif %}
+        <div class="date">
+        <p>published: {{ post.published_date }}</p>
+    </div>
+    </div>
+{% endblock %}
