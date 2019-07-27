@@ -4,18 +4,15 @@
    {% for post in post %}
       <div class="content container">
         <h1><a href="{% url 'post_detail' pk=post.pk %}" style="color: black;">{{ post.title }}</a></h1>
-<<<<<<< HEAD
         {% if post.image %}
         <p><img src="{{post.image.url}}" width="240" style="float:left;"></p>
         {% else %}
        <p></p>
        {% endif %}
-=======
->>>>>>> 46d7d2fc2a6c8ab59b52d7d057527a12356bbfa3
         <p>{{ post.text|linebreaksbr }}</p>
         <div class="date">
         <p>published: {{ post.published_date }}</p>
     </div>
     </div>
     {% endfor %}
-{% endblock %}
+{% endblock %} 

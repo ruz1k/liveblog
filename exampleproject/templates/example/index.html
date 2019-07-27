@@ -12,13 +12,9 @@
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu" style="float: right; color: white; font-size: 30pt; margin-top: 40px;"><span class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
-<<<<<<< HEAD
 			<h1><a href="{% url 'home' %}">Home</a></h1>
             <h1><a href="{% url 'post' %}">My Blog</a></h1>
             <h1><a href="https://github.com/">GitHub</a></h1>
-=======
-			<h1><a href="{% url 'home' %}">My Blog</a></h1>
->>>>>>> 46d7d2fc2a6c8ab59b52d7d057527a12356bbfa3
 		</div>
             {% block content %}
             {% endblock %}
