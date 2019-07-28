@@ -32,7 +32,7 @@ def post_edit(request, pk):
             post = form.save(commit=False)
             post.published_date = timezone.now()
             post.save()
-            return redirect('post_detail', pk=post.pk)
+            return redirect('post_detail', pk=detail.pk)
     else:
         form = PostForm(instance=post)
     return render(request, 'example/post_edit.html', {'form': form})
