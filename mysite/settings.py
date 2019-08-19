@@ -25,7 +25,7 @@ SECRET_KEY = '7yao&y9vq-@@_^*r8jg=z4=#=4vk3k_n7mgd2nz45xspfgp-*q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'liveblogdjangoo.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'MyLiveBlogDjango.pythonanywhere.com']
 
 
 # Application definition
