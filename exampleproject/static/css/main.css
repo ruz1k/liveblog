@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
+
+nav {
+    font-size:40px;
+    background-color: mediumpurple;
+    padding-bottom: 20px;
+}
+
+a {
+    color: white;
+    font-family: 'Francois One', sans-serif;
+}
+
+a:hover {
+    color: black;
+}

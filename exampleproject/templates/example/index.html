@@ -1,25 +1,36 @@
 {% load static %}
-<html>
-    <title>Blog</title>
+<html lang="en">
+<!DOCTYPE html>
 	<head>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{% static 'css/post.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        {% block scripts %}{% endblock %}
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link rel="stylesheet" href="{% static 'css/main.css' %}">
+         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+         <link rel="stylesheet" href="{% static 'css/home.css' %}">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        {% block styles %}{% endblock %}
 	</head>
 	<body>
-		<div class="page-header">
+    <div>
         {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu" style="float: right; color: white; font-size: 30pt; margin-top: 40px;"><span class="glyphicon glyphicon-plus"></span></a>
-        {% endif %}
-			<h1><a href="{% url 'home' %}">Home</a></h1>
-            <h1><a href="{% url 'post' %}">My Blog</a></h1>
-            <h1><a href="https://github.com/">GitHub</a></h1>
-		</div>
-            {% block content %}
-            {% endblock %}
-    </div>
-    </div>
+<a href="{% url 'post_new' %}" class="top-menu" style="float: right; color: white; font-size: 30pt; margin-top: 40px;"><span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
+    {% block nav %}
+        <nav class="nav flex-column">
+            <a class="nav-link active"href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'post' %}">My Blog</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Disabled</a>
+        </nav>
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
 	</body>
 </html>
