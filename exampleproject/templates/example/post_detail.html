@@ -12,18 +12,50 @@
 {% block style%}{% endblock%}
 
 {% block content %}
-    <div class="post_detail">
-    	<div class="container">
-        <h1>{{ post.title }}</h1>
-        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-        <p>{{ post.text|linebreaksbr }}</p>
-        {% if post.image %}
-        <p><img src="{{post.image.url}}" width="240"></p>
-        {% else %}
-       <p></p>
-        {% endif %}
-        <div class="date">
-        <p>published: {{ post.published_date }}</p>
+<div class="post_detail block">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <h1>{{ post.title }}</h1>
+                {% if post.title_image %}
+                <div class="image block">
+                    <div class="col-xs-12 text-center">
+                        <img src="{{post.title_image.url}}">
+                        {% else %}
+                        <p></p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="date block">
+                    <div class="col-xs-12 text-center">
+                        <li>published: {{ post.published_date }}</li>
+                    </div>
+                </div>
+                <hr>
+                <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+                <p>{{ post.text|linebreaksbr }}</p>
+                <div class="post_image block">
+                    <div class="col-xs-12">
+                {% if post.image%}
+                <div class="post_image block">
+                    <a href="{{post.image.url}}" class="ulightbox"><img src="{{post.image.url}}"></a>
+                {% else %}
+                <p></p>
+                {% endif %}
+                {% if post.image1%}
+                    <a href="{{post.image.url}}" class="ulightbox"><img src="{{post.image.url}}"></a>
+                {% else %}
+                <p></p>
+                {% endif %}
+                {% if post.image2%}
+                    <a href="{{post.image.url}}" class="ulightbox"><img src="{{post.image.url}}"></a>
+                {% else %}
+                <p></p>
+                {% endif %}
+                </div>
+                    </div>
+            </div>
+        </div>
     </div>
-    </div>
+</div>
 {% endblock %}

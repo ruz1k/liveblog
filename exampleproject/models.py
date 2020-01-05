@@ -5,8 +5,11 @@ from django.db.models import ImageField
 
 class Post(models.Model):
 	title = models.CharField(max_length=200)
+	title_image = models.ImageField(upload_to='media/title_image', null=True)
 	text = models.TextField()
 	image = models.ImageField(upload_to='media/image',null=True)
+	image1 = models.ImageField(upload_to='media/image', null=True)
+	image2 = models.ImageField(upload_to='media/image', null=True)
 	published_date = models.DateTimeField(blank=True, null=True)
 
 	def publish(self):

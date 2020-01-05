@@ -14,18 +14,25 @@
 {% block content %}
    {% for post in post %}
 <div class="content block">
-      <div class="container-fluid">
-        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        {% if post.image %}
-        <p><img src="{{post.image.url}}"></p>
-        {% else %}
-       <p>NEt Photo</p>
-       {% endif %}
-        <p>{{ post.text|linebreaksbr }}</p>
-        <div class="date">
-        <p>Опубликовано: {{ post.published_date }}</p>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                {% if post.title_image %}
+                <div class="col-xs-12">
+                    <p><a href="{% url 'post_detail' pk=post.pk%}"><img src="{{post.title_image.url}}"></a></p>
+                </div>
+                {% else %}
+                <p></p>
+                {% endif %}
+                <div class="row text-center">
+                    <div class="col-md-12">
+                    <a href="{% url 'post_detail' pk=post.pk%}" class="btn btn-dark" role="button" aria-pressed="false"  autocomplete="off">Читать cтатью</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 </div>
     {% endfor %}
 {% endblock %} 
