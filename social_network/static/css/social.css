@@ -1,0 +1,26 @@
+.social {
+  margin: 0 auto;
+  width: 100%;
+  height:100%;
+}
+
+.social h3 a {
+  font-size: 25pt;
+  padding-top: 50px;
+  margin: 0 auto;
+  color:black;
+  text-decoration: underline;
+
+}
+
+.social h1{
+  font-size: 45pt;
+  color: black;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+hr {
+  width: 100%;
+  padding-bottom: 50px;
+}

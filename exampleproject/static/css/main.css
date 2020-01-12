@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
 
-nav {
-    font-size:40px;
-    background-color: mediumpurple;
-    padding-bottom: 20px;
-}
-
-a {
-    color: white;
+.navbar-brand {
+    font-size:36pt;
     font-family: 'Francois One', sans-serif;
 }
 
-a:hover {
-    color: black;
+.nav-item {
+    font-size: 25pt;
+    font-family: 'Francois One', sans-serif;
+}
+
+@media (max-width:450px) {
+    .navbar-brand {font-size:32pt;}
+    .nav-item {font-size: 20pt;}
 }

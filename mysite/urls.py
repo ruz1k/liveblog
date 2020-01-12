@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('exampleproject.urls')),
     url(r'', include('home.urls')),
+    url(r'^social/', include('social_network.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
