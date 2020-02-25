@@ -17,8 +17,8 @@
 
 .content img {
     max-width: 100%;
-    width: 33%;
-    height:350px;
+    width: 25%;
+    height:650px;
 }
 
 .content h1 a{
@@ -52,7 +52,7 @@
 
 .date li {
     font-size: 15pt;
-    width:70%;
+    width:100%;
     padding-bottom: 50px;
 }
 
@@ -72,7 +72,7 @@
 
 .date_post li {
     font-size: 11pt;
-    width:84%;
+    width:100%;
     padding-bottom:30px;
 }
 
