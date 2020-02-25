@@ -24,16 +24,10 @@
                 {% else %}
                 <p></p>
                 {% endif %}
-                <!-- Date-->
-                <div class="date_post block">
-                    <div class="col-xs-12 text-center">
-                        <li>Опубликовано: {{ post.published_date }}</li>
-                    </div>
-                </div>
                 <div class="row text-center">
                     <div class="col-md-12">
                         <!-- Post Detail-->
-                    <a href="{% url 'post_detail' pk=post.pk%}" class="btn btn-dark" role="button" aria-pressed="false"  autocomplete="off">Читать cтатью</a>
+                    <a href="{% url 'post_detail' pk=post.pk%}" class="btn btn-dark" role="button" aria-pressed="false"  autocomplete="off">Read</a>
                     </div>
                 </div>
             </div>

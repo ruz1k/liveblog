@@ -25,14 +25,7 @@
                         {% endif %}
                     </div>
                 </div>
-                <!-- Date-->
-                <div class="date block">
-                    <div class="col-xs-12 text-center">
-                        <li>Опубликовано: {{ post.published_date }}</li>
-                    </div>
-                </div>
                 <hr>
-                <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
                 <p>{{ post.text|linebreaksbr }}</p>
                 <!-- Image block-->
                 <div class="post_image block">
