@@ -16,11 +16,20 @@
 .social h1{
   font-size: 45pt;
   color: black;
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
 hr {
   width: 100%;
   padding-bottom: 50px;
+}
+
+.form-group {
+  width:50%;
+}
+
+@media screen and (max-width:540px){
+  .form-group{width: 100%;}
+  .social h1{font-size: 30pt}
 }

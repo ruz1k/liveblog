@@ -11,28 +11,20 @@
 
 {% block content %}
    {% for post in post %}
-<!--Post List-->
-<div class="content block">
-    <div class="container-fluid">
-        <div class="row text-center">
-            <div class="col-md-12 col-xs-12">
-                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                {% if post.title_image %}
-                <div class="col-xs-12">
-                    <p><a href="{% url 'post_detail' pk=post.pk%}"><img src="{{post.title_image.url}}"></a></p>
-                </div>
-                {% else %}
-                <p></p>
-                {% endif %}
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        <!-- Post Detail-->
-                    <a href="{% url 'post_detail' pk=post.pk%}" class="btn btn-dark" role="button" aria-pressed="false"  autocomplete="off">Read</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+   <div class="card bg-light">
+     <h1 class="card-header">{{post.title}}</h1>
+     {% if post.title_image %}
+     <div class="col-xs-12">
+       <p><a href="{% url 'post_detail' pk=post.pk%}"><img src="{{post.title_image.url}}"></a></p>
+     </div>
+     {% else %}
+     <p></p>
+     {% endif %}
+     <div class="card-body">
+       <p class="card-text" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{post.text}}</p>
+       <a href="{% url 'post_detail' pk=post.pk%}" class="btn btn-dark" role="button" aria-pressed="false"  autocomplete="off">Look post</a>
+       <p class="card-text"><small class="text-muted">{{post.published_date}}</small></p>
+     </div>
+     </div>
     {% endfor %}
-{% endblock %} 
+{% endblock %}

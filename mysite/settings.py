@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'USER': '',
         'PASSWORD': '',
-        'HOST': '',    
+        'HOST': '',
         'PORT': '',
     }
 }
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
-LANGUAGE_CODE = "ru"
+LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = 'Europe/Moscow'
 
@@ -127,5 +127,4 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static")
 MEDIA_ROOT = os.path.join(BASE_DIR, "mysite/media")
 MEDIA_URL = '/media/'
-DATETIME_FORMAT="d  F  Y"
-
+DATETIME_FORMAT="d F Y"
